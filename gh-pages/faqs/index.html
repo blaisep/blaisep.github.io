@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Solution Architect FAQ &#8212; githubpages 0.0.9 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Glossary of terms &amp; concepts" href="../glossary.html" />
+    <link rel="prev" title="Algolia solutions" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">githubpages 0.0.9 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   "Sample customer questions and answers"
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   "Glossary of project terms"
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/faqs/index.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#records">
+     Records
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing">
+     Indexing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solution-architect-faq">
+<h1>Solution Architect FAQ<a class="headerlink" href="#solution-architect-faq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="question-1">
+<h2>Question 1:<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<p>From George:</p>
+<blockquote class="pull-quote">
+<div><p>Hello,
+I’m new to search engines, and there are a lot of concepts I’m not educated on. To make my onboarding smoother, it’d help if you could provide me with some definitions of the following concepts:
+- Records
+- Indexing</p>
+</div></blockquote>
+<p>George, yes, it’s common for anyone new to search to feel a bit overwhelmed.
+We make an ongoing effort to arrange the concepts in a coherent sequence.
+It turns out that you are right on schedule because <em>Records</em> and <em>Indexing</em> are the topics that come up at this point in the process.</p>
+<div class="section" id="records">
+<h3>Records<a class="headerlink" href="#records" title="Permalink to this headline">¶</a></h3>
+<p>An Algolia record (or object) is a set of key-value pairs called attributes. Attributes are similar to fields, yet they don’t have to respect a schema and can change from one object to another.
+You can also think of the attributes as facts which describe the same piece of data, so you will want to include any information that facilitates:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>search,</p></li>
+<li><p>display on the front end,</p></li>
+<li><p>filtering,</p></li>
+<li><p>or relevance.</p></li>
+</ul>
+</div></blockquote>
+<p>Algolia uses the properties of the fields to improve search results.
+Algolia can also use the fields to create a sequence of records and provide results more quickly.</p>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.algolia.com/doc/guides/indexing/indexing-overview/#overview">Indexing</a> is the process of arranging references to fields so that you can locate their the corresponding records without waiting to read the content.
+Indexing is also useful to calculate facts about the set of records; such as the total, the most/least recent, etc.</p>
+<blockquote class="pull-quote">
+<div><p>I’m also struggling with understanding what types of metrics would be useful to include in the “Custom Ranking.”
+Cheers,
+George</p>
+</div></blockquote>
+<p>In general, you will want to consider custom ranking in any situation where you want to determine the order using a combination of several values.
+Let’s say that you want to broadly represent sentiment analysis by combining “Likes” and “re-tweets”.
+At index time, Algolia will create a third index, representing the combination of both metrics.</p>
+<p>Thank you for bringing these questions to my attention. It helps me track the effectiveness of our onboarding process and identify where we can improve.</p>
+</div>
+</div>
+<div class="section" id="question-2">
+<h2>Question 2:<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<blockquote class="pull-quote">
+<div><p>Hello,
+Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new dashboard design. Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient.
+Regards,
+Matt</p>
+</div></blockquote>
+<p>Hi Matt, <strong>thank you</strong> for bringing this to my attention, you are providing me with information I can’t easily obtain.
+Please enjoy the beverage of your choice with the attached gift card.
+You will also notice a new badge on your profile for the <em>power user</em> achievement.
+Speaking of power usage, I want to confess that the design goal of the dashboard is to provide casual users with access to the features; and to
+illustrate the structure of the service.</p>
+<p>If your goal is to reduce the number of clicks you need to make to update your config, I can propose two automation strategies to consider
+I’m happy to provide you with concrete examples of whichever one you pick:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>On demand: you can trigger the edits/delete steps from a command line or via integration with a web app of your own.</p></li>
+<li><p>Batch: you can extend your content management system to trigger the steps as part of some existing workflow.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="question-3">
+<h2>Question 3:<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
+<blockquote class="pull-quote">
+<div><p>Hi,
+I’m looking to integrate Algolia in my website. Will this be a lot of development work for me? What’s the high level process look like?
+Regards,
+Leo</p>
+</div></blockquote>
+<p>Hi Leo,
+You can get value from Algolia <a class="reference external" href="https://youtu.be/IYY5RM1sBC0">in as little as 45 seconds</a> by doing no more than:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Upload a description of your data</p></li>
+<li><p>Paste three lines of code into the code for your website</p></li>
+</ul>
+</div></blockquote>
+<p>Our business model is based on your continued success, so Algolia does provide additional tools and examples for customers who decide to go deeper.
+You can determine when you’re ready to explore additional integration, and we will be there to help.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">Algolia solutions</a>
+    <a class='right-next' id="next-link" href="../glossary.html" title="next page">Glossary of terms &amp; concepts</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Blaise Pabon<br/>
+        
+            &copy; Copyright 2021, Blaise Pabon.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
