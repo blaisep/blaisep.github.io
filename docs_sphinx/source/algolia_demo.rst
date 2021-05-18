@@ -1,4 +1,4 @@
-Part 1 (3 hours)
+# Solutions Architect Excercise: Part 1 (3 hours)
 
 
 [ ] Choose a dataset,
@@ -6,7 +6,7 @@ either from our list of public datasets: https://github.com/algolia/datasets
 or you can go ahead and use your own from a different source if you'd like!
 
 
-[ ] Create an Algolia account
+[X] Create an Algolia account
 [ ] index the data: https://www.algolia.com/doc/guides/indexing/indexing-overview/#overview
 You can do so via the API or dashboard, whichever you prefer.
 
@@ -24,7 +24,7 @@ and then publish it using Github's gh-pages so we can interact with it!
 
 
 
-[ ] Give Algolia admins access to your data so we can view your relevance settings:
+[X] Give Algolia admins access to your data so we can view your relevance settings:
 https://www.algolia.com/users/access_control
 
 
