@@ -1,6 +1,6 @@
 from rich import traceback
 traceback.install()
-
+import datetime
 from pathlib import Path  # because paths are not strings
 import os
 import sys
@@ -9,7 +9,8 @@ sys.path.insert(0, Path(''))
 # -- Project information -----------------------------------------------------
 
 project = 'githubpages'
-copyright = '2021, Blaise Pabon'
+year = datetime.now().year
+copyright = f"{year}, Blaise Pabon"
 author = 'Blaise Pabon'
 
 # The full version, including alpha/beta/rc tags
