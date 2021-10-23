@@ -92,8 +92,9 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 github:
-      @make html
-      @cp -a _build/html/. ../docs
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) ../source
+	@echo "Build finished. The HTML files are in the /source directory."
+
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex

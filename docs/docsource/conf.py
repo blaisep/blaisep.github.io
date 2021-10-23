@@ -1,17 +1,16 @@
-import datetime
 import sys
 
 from rich import traceback
 traceback.install()
 
 
-sys.path.insert(0, "..")
+sys.path.insert(0, "")
 
 # -- Project information -----------------------------------------------------
 
-project = 'PDM-Crawler'
-year = datetime.now().year
-copyright = f"{year}, Blaise Pabon"
+project = 'Github-blaisep'
+# year = datetime.now().year
+# copyright = f"{year}, Blaise Pabon"
 author = 'Blaise Pabon'
 
 # The full version, including alpha/beta/rc tags
@@ -46,6 +45,6 @@ exclude_patterns = ['_build',
                     ]
 # -- Options for HTML output
 pygments_style = "friendly"
-html_theme = 'sphinx_book_theme' # https://sphinx-themes.org/sample-sites/sphinx-book-theme/kitchen-sink/
+html_theme = 'furo'
 # html_theme = "furo"  # python3 -m pip install furo
 html_static_path = ['_static']
