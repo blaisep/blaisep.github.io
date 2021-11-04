@@ -1,0 +1,131 @@
+# -*- coding: utf-8 -*-
+# inspired by: https://raw.githubusercontent.com/python-attrs/attrs/main/docs/conf.py
+import codecs
+import os
+import re
+
+import datetime
+import furo
+
+def read(*parts):
+    """
+    Build an absolute path from *parts* and and return the contents of the
+    resulting file.  Assume UTF-8 encoding.
+    """
+    here = os.path.abspath(os.path.dirname(__file__))
+    with codecs.open(os.path.join(here, *parts), "rb", "utf-8") as f:
+        return f.read()
+
+
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+def find_version(*file_paths):
+    """
+    Build a path from *file_paths* and search for a ``__version__``
+    string inside.
+    """
+    version_file = read(*file_paths)
+    version_match = re.search(
+        r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M
+    )
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
+
+# -- Project information -----------------------------------------------------
+project = 'Vitrina'
+author = 'blaise at gmail'
+year = datetime.now().year
+copyright = f"{year}, Blaise Pabon"
+
+# -- General configuration ------------------------------------------------
+
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.todo",
+    "notfound.extension", # pip install sphinx-notfound-page
+    'sphinx.ext.viewcode', # enables the "view page's _source code" option in the HTML.
+    #             "sphinx_rtd_theme", # layouts and structures used on ReadTheDocs
+    'sphinxcontrib.plantuml', # enable plantuml diagrams and directives.
+    'sphinx.ext.githubpages', # prepares HTML for hosting on Github
+    'sphinx_copybutton', # pip install sphinx-copybutton (note the hyphen!)
+]
+
+linkcheck_ignore = [
+    r"https://github.com/.*/(issues|pull)/\d+",
+]
+
+# In nitpick mode (-n), still ignore any of the following "broken" references
+# to non-types.
+nitpick_ignore = [
+    ("py:class", "Any value"),
+    ("py:class", "callable"),
+    ("py:class", "callables"),
+    ("py:class", "tuple of types"),
+]
+
+master_doc = "index"
+templates_path = ['_templates']
+source_suffix = ['.rst', 'md']
+exclude_patterns = ['_build',
+                    'Thumbs.db',
+                    '.DS_Store',
+                    ]
+# -- Options for HTML output
+pygments_style = "friendly"
+html_theme = "furo"  # python3 -m pip install furo
+
+
+# The reST default role (used for this markup: `text`) to use for all
+# documents.
+default_role = "any"
+
+# If true, '()' will be appended to :func: etc. cross-reference text.
+add_function_parentheses = True
+
+# -- Options for HTML output ----------------------------------------------
+
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+
+html_theme = "furo"  # https://pradyunsg.me/furo/kitchen-sink/
+html_theme_options = {
+    "sidebar_hide_name": True,
+}
+
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+# html_favicon = None
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ["_static"]
+
+# If false, no module index is generated.
+html_domain_indices = True
+
+# If false, no index is generated.
+html_use_index = True
+
+# If true, the index is split into individual pages for each letter.
+html_split_index = False
+
+# If true, links to the reST sources are added to the pages.
+html_show_sourcelink = True
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+html_show_sphinx = True
+
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+html_show_copyright = True
+
+
+intersphinx_mapping = {
+    "https://docs.python.org/3": None,
+}
+
+# Allow non-local URIs so we can have images in CHANGELOG etc.
+suppress_warnings = ["image.nonlocal_uri"]
